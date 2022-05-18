@@ -7,7 +7,7 @@ const archivoNuevo = new Contenedor();
 
 router.get("/", (request, response) => {
     const productos = archivoNuevo.getAll();
-    res.render('pages/list', {productos: productos});
+    response.render('pages/list', {productos: productos});
 });
 
 router.get("/:id", (request, response) => {

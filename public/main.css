@@ -9,7 +9,10 @@ body {
 }
 
 .formPartial{
-    margin: 2rem;
+    margin: 1rem;
+}
+.noProdsMessage{
+    margin: 1rem;
 }
 
 /*No esta funcionando... no se porque */
