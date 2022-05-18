@@ -14,5 +14,8 @@ body {
 .noProdsMessage{
     margin: 1rem;
 }
+.imgProd{
+    width: 4rem;
+}
 
-/*No esta funcionando... no se porque */
+/*No esta funcionando para list.ejs... no se porque */
