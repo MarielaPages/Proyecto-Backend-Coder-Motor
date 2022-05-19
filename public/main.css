@@ -8,13 +8,6 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-/*NavBar*/
-.navbar-nav.navbar-center {
-    position: absolute;
-    left: 50%;
-    transform: translatex(-50%);
-}
-
 /*Form*/
 .formPartial{
     margin-top: 1rem;
@@ -39,4 +32,11 @@ body {
     margin: auto;
 }
 
-/*No esta funcionando para list.ejs... no se porque */
+@media only screen and (min-width:992px){
+    /*NavBar*/
+    .navbar-nav.navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+}

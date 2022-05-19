@@ -18,6 +18,8 @@ router.get("/:id", (request, response) => {
 
 router.post('/', (request, response) => {
     const producto = request.body; // esto es el objeto que llega con los datos. Lo uso para pasarselo al save
+    const imagen = request.file;
+    producto.thumbnail = '/files/'+imagen.filename; // agrego esta propiedad al objeto
     const productoAgregado = archivoNuevo.save(producto)
     response.redirect('/')
 })

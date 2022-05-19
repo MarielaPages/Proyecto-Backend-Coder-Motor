@@ -1,9 +1,9 @@
 <div class="formPartial">
     <h2>Add products</h2>
-    <form action="/api/productos" method="post"> 
+    <form action="/api/productos" method="post" enctype="multipart/form-data"> 
         <input type="text" name="title" placeholder="Title" class="form-control" id="exampleFormControlInput1">
         <input type="number" name="price" placeholder="Price" class="form-control" id="exampleFormControlInput1">
-        <input type="text" name="thumbnail" placeholder="Thumbnail" class="form-control" id="exampleFormControlInput1">
+        <input type="file" name="thumbnail" class="form-control" id="exampleFormControlInput1">
         <button class="btn btn-secondary">Add</button>
     </form>
 </div> 
