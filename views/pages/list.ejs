@@ -12,34 +12,32 @@
 </head>
 <body>
     
-    <%- include('../partials/navBar'); %> 
+    <%- include('../partials/navBar'); %>
     
-    <div class="container">
-        <div class="row">
-            <% if(productos.length>0) { %>
-                <div class="col-4">
-                    <h3>Product</h3>
-                </div>
-                <div class="col-4">
-                    <h3>Price</h3>
-                </div>
-                <div class="col-4">
-                    <h3>Image</h3>
-                </div>
+    <% if(productos.length>0) { %>
+        <div class="tableContainer">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Image</th>
+                </tr>
+                </thead>
                 <% productos.forEach(producto =>{ %>
-                    <div class="col-4">
-                        <%= producto.title %>
-                    </div>
-                    <div class="col-4">
-                        <%= producto.price %>
-                    </div>
-                    <div class="col-4">
+                <tbody>
+                <tr>
+                    <td><%= producto.title %></td>
+                    <td><%= producto.price %></td>
+                    <td>
                         <img src="<%= producto.thumbnail %>" alt="<%= producto.title %>" class="imgProd">
-                    </div>
+                    </td>
+                </tr>
+                </tbody>
                 <% }) %>
-            <% } %>
+            </table>
         </div>
-    </div>
+    <% } %>
     <% if(productos.length<1) { %>
         <div class="noProdsMessage">
             <p>There are no products</p>

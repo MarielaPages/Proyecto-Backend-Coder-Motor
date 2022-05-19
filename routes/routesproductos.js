@@ -7,7 +7,7 @@ const archivoNuevo = new Contenedor();
 
 router.get("/", (request, response) => {
     const productos = archivoNuevo.getAll();
-    response.render('pages/list', {productos: productos});
+    response.render('pages/list', {productos: productos}); // Lo busca en views
 });
 
 router.get("/:id", (request, response) => {
@@ -19,7 +19,7 @@ router.get("/:id", (request, response) => {
 router.post('/', (request, response) => {
     const producto = request.body; // esto es el objeto que llega con los datos. Lo uso para pasarselo al save
     const productoAgregado = archivoNuevo.save(producto)
-    response.json({productoAgregado: productoAgregado})
+    response.redirect('/')
 })
 
 router.put("/:id", (request, response) => {

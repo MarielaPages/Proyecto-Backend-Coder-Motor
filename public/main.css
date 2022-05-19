@@ -8,14 +8,35 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-.formPartial{
-    margin: 1rem;
+/*NavBar*/
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
 }
+
+/*Form*/
+.formPartial{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-control{
+    margin-bottom: 1rem;
+    width: 20rem;
+}
+
+/*Table*/
 .noProdsMessage{
     margin: 1rem;
 }
 .imgProd{
     width: 4rem;
+}
+.tableContainer{
+    width: 80%;
+    margin: auto;
 }
 
 /*No esta funcionando para list.ejs... no se porque */
